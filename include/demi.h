@@ -9,10 +9,15 @@ class Demi{
     private:
         int window_h;
         int window_w;
-        char* window_title;
+        std::string window_title;
+
+        void engineError(std::string error);
 
     public:
-        Demi(int window_h,int window_w,std::string window_title);
+        bool isActive = false;
 
+        Demi(int window_h,int window_w,std::string window_title);
         void Log(std::string log);
+
+        int Init();
 };
